@@ -1,0 +1,12 @@
+FROM arm64v8/golang:1.9.2-alpine3.6
+
+MAINTAINER David Wilder <wilder@us.ibm.com>
+
+ADD . /src
+WORKDIR /src
+
+ENV PROTOBUF_TAG v3.5.1
+
+RUN ./build.sh
+
+ENTRYPOINT ["protoc"]

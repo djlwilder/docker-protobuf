@@ -14,7 +14,7 @@ ifeq ($(ARCH),x86_64)
         override ARCH=amd64
 endif
 
-DOCKERFILE ?= Dockerfile-$(ARCH)
+DOCKERFILE ?= Dockerfile.$(ARCH)
 VERSION ?= latest
 DEFAULTIMAGE ?= calico/protoc:$(VERSION)
 ARCHIMAGE ?= $(DEFAULTIMAGE)-$(ARCH)
